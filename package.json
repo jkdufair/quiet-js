@@ -1,0 +1,23 @@
+{
+  "name": "quiet-js",
+  "version": "0.0.1",
+  "description": "Transmit data with sound using Web Audio",
+  "main": "quiet-emscripten.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streamkitchen/quiet-js.git"
+  },
+  "author": "Brian Armstrong",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/streamkitchen/quiet-js/issues"
+  },
+  "homepage": "https://github.com/streamkitchen/quiet-js#readme"
+}
