@@ -2,7 +2,7 @@
   "name": "quiet-js",
   "version": "0.0.1",
   "description": "Transmit data with sound using Web Audio",
-  "main": "quiet-emscripten.js",
+  "main": "./quiet-emscripten.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
