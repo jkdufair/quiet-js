@@ -307,10 +307,10 @@ var Quiet = (function() {
 
             // put an input node on the graph. some browsers require this to run our script processor
             // this oscillator will not actually be used in any way
-            var dummy_osc = audioCtx.createOscillator();
-            dummy_osc.type = 'square';
-            dummy_osc.frequency.value = 420;
-            dummy_osc.connect(transmitter);
+            // var dummy_osc = audioCtx.createOscillator();
+            // dummy_osc.type = 'square';
+            // dummy_osc.frequency.value = 420;
+            // dummy_osc.connect(transmitter);
 
             transmitter.connect(audioCtx.destination);
         };
@@ -506,10 +506,26 @@ var Quiet = (function() {
             lastChecksumFailCount = currentChecksumFailCount;
         }
 
+        // let biggest = -Infinity;
+        // let smallest = Infinity;
+        // const maxmin = function(num) {
+          // if (num > biggest) {
+            // biggest = num;
+          // }
+          // if (num < smallest) {
+            // smallest = num;
+          // }
+        // };
+        //
 
+        window.samples = [];
+
+
+        let last = Date.now();
         scriptProcessor.onaudioprocess = function(e) {
             var input = e.inputBuffer.getChannelData(0);
             var sample_view = Module.HEAPF32.subarray(samples/4, samples/4 + sampleBufferSize);
+            // window.samples.push(Array.prototype.slice.call(input));
             sample_view.set(input);
 
             window.setTimeout(consume, 0);
